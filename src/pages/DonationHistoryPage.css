@@ -1,0 +1,132 @@
+.history-page {
+  min-height: 100vh;
+  padding: 40px 50px 70px;
+  background:
+    radial-gradient(circle at top right, rgba(135, 206, 235, 0.28), transparent),
+    linear-gradient(135deg, #eaf6fc 0%, #f8fcff 100%);
+}
+
+.history-hero {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.history-badge {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 999px;
+  background: rgba(135, 206, 235, 0.18);
+  color: midnightblue;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.history-hero h1 {
+  font-size: 50px;
+  color: midnightblue;
+  font-family: 'Playfair Display', serif;
+}
+
+.history-hero p {
+  max-width: 700px;
+  margin: 14px auto 0;
+  color: #607895;
+  line-height: 1.8;
+}
+
+.search-box {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 35px;
+}
+
+.search-box input {
+  width: 420px;
+  padding: 16px 18px;
+  border-radius: 16px;
+  border: 1px solid #d7e5f2;
+  outline: none;
+  background: rgba(255,255,255,0.75);
+  backdrop-filter: blur(10px);
+}
+
+.history-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 26px;
+}
+
+.history-card {
+  background: rgba(255,255,255,0.68);
+  backdrop-filter: blur(18px);
+  border-radius: 24px;
+  padding: 28px;
+  box-shadow: 0 20px 50px rgba(25,25,112,0.08);
+  transition: all 0.3s ease;
+}
+
+.history-card:hover {
+  transform: translateY(-8px);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: skyblue;
+  margin-bottom: 18px;
+}
+
+.history-card h3 {
+  color: midnightblue;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.history-info p {
+  margin-bottom: 14px;
+  color: #5d7390;
+}
+
+.success-status {
+  color: #1f8a4c;
+  font-weight: 700;
+}
+
+.empty-history {
+  text-align: center;
+  padding: 80px 20px;
+  color: midnightblue;
+}
+
+.empty-history svg {
+  font-size: 70px;
+  color: skyblue;
+  margin-bottom: 20px;
+}
+
+.history-loading {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: midnightblue;
+}
+
+@media (max-width: 768px) {
+  .history-page {
+    padding: 30px 20px 60px;
+  }
+
+  .history-hero h1 {
+    font-size: 38px;
+  }
+
+  .search-box input {
+    width: 100%;
+  }
+
+  .history-grid {
+    grid-template-columns: 1fr;
+  }
+}

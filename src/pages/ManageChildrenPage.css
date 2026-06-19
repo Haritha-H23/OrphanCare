@@ -1,0 +1,252 @@
+.manage-page {
+  min-height: 100vh;
+  padding: 40px 50px 70px;
+  background:
+    radial-gradient(circle at top right, rgba(135, 206, 235, 0.28), transparent),
+    linear-gradient(135deg, #eaf6fc 0%, #f8fcff 100%);
+}
+
+.admin-badge {
+  display: inline-block;
+  padding: 10px 18px;
+  border-radius: 999px;
+  background: rgba(135, 206, 235, 0.18);
+  color: midnightblue;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.manage-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 45px;
+  gap: 20px;
+}
+
+.manage-header h1 {
+  font-size: 48px;
+  color: midnightblue;
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 10px;
+}
+
+.manage-header p {
+  color: #607895;
+  line-height: 1.7;
+}
+
+.add-btn {
+  border: none;
+  padding: 14px 24px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, skyblue, midnightblue);
+  color: white;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  box-shadow: 0 15px 28px rgba(25, 25, 112, 0.16);
+  transition: all 0.3s ease;
+}
+
+.add-btn:hover {
+  transform: translateY(-3px);
+}
+
+.children-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 28px;
+}
+
+.admin-child-card {
+  border-radius: 28px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.68);
+  backdrop-filter: blur(18px);
+  box-shadow:
+    0 22px 50px rgba(25, 25, 112, 0.08),
+    0 8px 20px rgba(0, 0, 0, 0.04);
+  transition: all 0.35s ease;
+}
+
+.admin-child-card:hover {
+  transform: translateY(-10px);
+  box-shadow:
+    0 28px 60px rgba(25, 25, 112, 0.12);
+}
+
+.admin-child-card img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 24px;
+}
+
+.card-content h3 {
+  font-size: 28px;
+  color: midnightblue;
+  margin-bottom: 16px;
+}
+
+.card-content p {
+  color: #607895;
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+.admin-actions {
+  display: flex;
+  gap: 14px;
+  margin-top: 22px;
+}
+
+.edit-btn,
+.delete-btn {
+  flex: 1;
+  border: none;
+  padding: 14px;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.edit-btn {
+  background: rgba(135, 206, 235, 0.15);
+  color: midnightblue;
+}
+
+.delete-btn {
+  background: rgba(255, 90, 90, 0.14);
+  color: #c53030;
+}
+
+.edit-btn:hover,
+.delete-btn:hover {
+  transform: translateY(-2px);
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(8, 18, 58, 0.45);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.child-modal {
+  width: 760px;
+  max-width: 95%;
+  background: white;
+  border-radius: 28px;
+  padding: 30px;
+  box-shadow:
+    0 30px 70px rgba(25, 25, 112, 0.18);
+}
+
+.modal-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.modal-top h2 {
+  color: midnightblue;
+  font-size: 30px;
+}
+
+.close-btn {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  color: midnightblue;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.form-grid input {
+  padding: 14px 16px;
+  border-radius: 14px;
+  border: 1px solid #d8e5f2;
+  outline: none;
+  background: #f9fcff;
+  font-size: 15px;
+}
+
+textarea {
+  width: 100%;
+  margin-top: 18px;
+  min-height: 120px;
+  resize: none;
+  padding: 16px;
+  border-radius: 16px;
+  border: 1px solid #d8e5f2;
+  outline: none;
+  background: #f9fcff;
+  font-size: 15px;
+  box-sizing: border-box;
+}
+
+.save-btn {
+  width: 100%;
+  margin-top: 22px;
+  border: none;
+  padding: 15px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, skyblue, midnightblue);
+  color: white;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  box-shadow: 0 15px 28px rgba(25, 25, 112, 0.16);
+}
+
+.save-btn:hover {
+  transform: translateY(-2px);
+}
+
+@media (max-width: 992px) {
+  .manage-page {
+    padding: 30px 24px 60px;
+  }
+
+  .manage-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .manage-header h1 {
+    font-size: 38px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 576px) {
+  .manage-header h1 {
+    font-size: 30px;
+  }
+
+  .admin-child-card img {
+    height: 220px;
+  }
+
+  .card-content h3 {
+    font-size: 24px;
+  }
+}

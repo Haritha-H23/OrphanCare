@@ -1,0 +1,371 @@
+.dashboard-page {
+  min-height: 100vh;
+  padding: 40px 50px 80px;
+   background:
+    radial-gradient(circle at top right, rgba(135, 206, 235, 0.22), transparent),
+    radial-gradient(circle at bottom left, rgba(173, 216, 230, 0.18), transparent),
+    linear-gradient(135deg, #eaf6fc 0%, #f8fcff 100%);
+  font-family: 'Poppins', sans-serif;
+}
+
+.dashboard-badge {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 999px;
+  background: rgba(135, 206, 235, 0.18);
+  color: midnightblue;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.profile-hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 35px;
+  padding: 40px;
+  border-radius: 30px;
+  background:
+  linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.92),
+    rgba(240, 248, 255, 0.95)
+  );
+  box-shadow:
+   0 30px 60px rgba(25, 25, 112, 0.08),
+    0 12px 24px rgba(0, 0, 0, 0.05);
+  margin-bottom: 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+.profile-hero::after {
+  content: "💙";
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  font-size: 38px;
+  opacity: 0.12;
+}
+
+.profile-left {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.avatar-circle {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, skyblue, midnightblue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow:
+    0 20px 35px rgba(93, 173, 226, 0.22);
+}
+
+.avatar-circle svg {
+  font-size: 68px;
+  color: white;
+}
+
+.profile-left h1 {
+  font-size: 42px;
+  font-family: 'Playfair Display', serif;
+  color: #1e2a78;
+  margin-bottom: 12px;
+}
+
+.profile-left p {
+  max-width: 580px;
+  line-height: 1.8;
+  color: #5e6b88;
+  font-size: 16px;
+}
+
+.profile-right {
+  min-width: 280px;
+  background: rgba(255,255,255,0.85);
+  padding: 24px;
+  border-radius: 22px;
+  border: 1px solid rgba(255, 182, 193, 0.25);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+}
+
+.profile-right p {
+  color: #1e2a78;
+  margin-bottom: 14px;
+  font-size: 15px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.stat-card {
+  background: white;
+  border-radius: 26px;
+  padding: 30px;
+  text-align: center;
+  box-shadow:
+     0 18px 45px rgba(25, 25, 112, 0.08);
+  transition: all 0.35s ease;
+  border-top: 5px solid skyblue;
+}
+
+.stat-card:hover {
+  transform: translateY(-8px) scale(1.02);
+}
+
+.stat-card svg {
+  font-size: 44px;
+  color: skyblue;
+}
+
+.stat-card h3 {
+  font-size: 32px;
+  color: #1e2a78;
+  margin: 16px 0 10px;
+  font-weight: 700;
+}
+
+.stat-card p {
+  color: #6d7b96;
+  font-weight: 500;
+}
+
+.actions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.action-card {
+  background:
+    linear-gradient(135deg, white, #fff8f3);
+  border-radius: 28px;
+  padding: 30px;
+  box-shadow:
+    0 20px 45px rgba(93, 173, 226, 0.08);
+  cursor: pointer;
+  transition: all 0.35s ease;
+  border: 1px solid rgba(135, 206, 235, 0.18);
+}
+
+.action-card:hover {
+  transform: translateY(-8px);
+}
+
+.action-card svg {
+  font-size: 42px;
+  color: #5dade2;
+  margin-bottom: 18px;
+}
+
+.action-card h3 {
+  color: #1e2a78;
+  font-size: 22px;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.action-card p {
+  color: #6a7892;
+  line-height: 1.7;
+}
+
+.dashboard-bottom {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  margin-bottom: 40px;
+}
+
+.recent-panel {
+  background: white;
+  border-radius: 26px;
+  padding: 28px;
+  box-shadow:
+    0 18px 40px rgba(93, 173, 226, 0.08);
+}
+
+.recent-panel h2 {
+  color: #1e2a78;
+  font-size: 26px;
+  margin-bottom: 20px;
+  font-family: 'Playfair Display', serif;
+}
+
+.donation-row,
+.campaign-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0;
+  border-bottom: 1px solid #eef3f9;
+  color: #5f7693;
+  font-weight: 600;
+}
+
+.impact-banner {
+  padding: 36px;
+  border-radius: 28px;
+  text-align: center;
+  background:
+    linear-gradient(135deg, skyblue, midnightblue);
+  color: white;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.7;
+  box-shadow:
+    0 22px 50px rgba(93, 173, 226, 0.20);
+}
+
+@media (max-width: 1100px) {
+  .profile-hero {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .dashboard-bottom {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard-page {
+    padding: 25px 18px 60px;
+  }
+
+  .profile-left {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .profile-left h1 {
+    font-size: 32px;
+  }
+
+  .impact-banner {
+    font-size: 18px;
+  }
+}
+.featured-child {
+  display: grid;
+  grid-template-columns: 420px 1fr;
+  gap: 32px;
+  align-items: center;
+
+  background: rgba(255, 255, 255, 0.78);
+  backdrop-filter: blur(16px);
+
+  border-radius: 28px;
+  padding: 30px;
+  margin-bottom: 40px;
+
+  box-shadow:
+    0 20px 50px rgba(25, 25, 112, 0.08);
+}
+
+.featured-image {
+  width: 100%;
+  height: 320px;
+  overflow: hidden;
+  border-radius: 24px;
+  position: relative;
+}
+
+.featured-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 24px;
+  display: block;
+}
+
+.featured-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.featured-tag {
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: rgba(135, 206, 235, 0.18);
+  color: midnightblue;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  width: fit-content;
+}
+
+.featured-content h2 {
+  font-size: 38px;
+  font-family: 'Playfair Display', serif;
+  color: midnightblue;
+  margin-bottom: 16px;
+}
+
+.featured-content p {
+  color: #5f7693;
+  line-height: 1.8;
+  font-size: 16px;
+  margin-bottom: 24px;
+  max-width: 600px;
+}
+
+.featured-content button {
+  width: fit-content;
+  padding: 14px 26px;
+  border: none;
+  border-radius: 14px;
+  background: linear-gradient(135deg, skyblue, midnightblue);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 12px 24px rgba(25, 25, 112, 0.16);
+  transition: all 0.3s ease;
+}
+
+.featured-content button:hover {
+  transform: translateY(-3px);
+}
+
+.empty-text {
+  color: #6c7f99;
+  padding: 12px 0;
+}
+
+.impact-banner svg {
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+
+.impact-banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+@media (max-width: 1000px) {
+  .featured-child {
+    grid-template-columns: 1fr;
+  }
+
+  .featured-image {
+    height: 260px;
+  }
+
+  .featured-content h2 {
+    font-size: 30px;
+  }
+}
